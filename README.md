@@ -1,7 +1,12 @@
 download or clone this code to ur code editor 
-then run =>
-    ## npm i 
-   ## npm run start
+then run 
+  
+  ## `npm i` 
+  ## `npm run start`
+  
+  
+ 
+ 
 # Getting Started with Create React App
 
 this app will help you figure out how to integrate redux with a react application
