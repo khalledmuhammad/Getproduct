@@ -1,0 +1,21 @@
+.mainHeader{
+    position: fixed;
+    top : 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #a70000;
+    z-index: 10;
+}
+.mainHeader h1{
+    color: white;
+}
+.mainHeader ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
