@@ -6,6 +6,7 @@ import {useSelector , useDispatch} from "react-redux"
 import { sendCartData , fetchData } from './store/Cart-actions';
 
 
+
 function App() {
   const [showCart , SetShowCart] = useState(false)
   const OnAfterClose=($value) => {document.body.style.overflow = $value}
@@ -22,7 +23,6 @@ function App() {
 }
 const cart = useSelector(state=>state)
 const dispatch = useDispatch()
-let isintial = true;
 
 
 useEffect(()=>{
@@ -37,9 +37,7 @@ useEffect(()=>{
     dispatch(sendCartData( cart))
 
   }
-  return ()=>{
-    isintial = false
-  }
+ 
  
 }, [ cart , dispatch ])
 

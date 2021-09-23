@@ -18,7 +18,7 @@ function ProductItems(props) {
             ${price.toFixed(2)}
             </div>
         </header>
-        <p>{description}</p>
+        <span>{description}</span>
         <div className={classes.actions}>
           <button onClick={addToCart} >Add to Cart</button>
         </div> 

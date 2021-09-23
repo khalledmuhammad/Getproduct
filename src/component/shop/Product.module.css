@@ -7,7 +7,6 @@
     font-size:26px;
     letter-spacing:2.08px;
     line-height:28.6px;
-    text-align:center;
     text-transform:uppercase;
   }
   
@@ -16,3 +15,25 @@
     margin: 0;
     padding: 0;
   }
+  
+@media (max-width: 390px) {
+  .products h2{
+      font-size: 8px;
+      letter-spacing:1.6px;
+      line-height:20px;
+    }
+  }
+  @media (max-width: 299px) {
+    .products h2{
+        font-size: 5px;
+      }
+    }
+ @media (max-width: 530px) {
+  .products h2{
+    font-size: 20px;
+  }
+
+ 
+} 
+
+

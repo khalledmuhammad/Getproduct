@@ -42,3 +42,16 @@
       transform: scale(1);
     }
   }
+
+
+
+@media (min-width : 313px) {
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+ 
+}
