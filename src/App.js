@@ -1,17 +1,47 @@
-import { useState } from 'react';
+import { useState , useEffect} from 'react';
 import Cart from './component/cart/Cart';
 import Header from './component/header/Header';
 import Product from './component/shop/Product';
+import {useSelector , useDispatch} from "react-redux"
+import { sendCartData , fetchData } from './store/Cart-actions';
 
 
 function App() {
   const [showCart , SetShowCart] = useState(false)
+  const OnAfterClose=($value) => {document.body.style.overflow = $value}
+
+
   const handleShowCart=()=>{
     SetShowCart(true)
+
+    OnAfterClose("hidden")
   }
   const handleHideCard=()=>{
     SetShowCart(false)
+    OnAfterClose("scroll")
+}
+const cart = useSelector(state=>state)
+const dispatch = useDispatch()
+let isintial = true;
+
+
+useEffect(()=>{
+  dispatch(fetchData())
+ 
+}, [ dispatch ])
+useEffect(()=>{
+ 
+   
+
+  if(cart.updated){
+    dispatch(sendCartData( cart))
+
   }
+  return ()=>{
+    isintial = false
+  }
+ 
+}, [ cart , dispatch ])
 
   return (
     <>

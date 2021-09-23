@@ -6,7 +6,7 @@ import {useSelector} from "react-redux"
 function CartButton(props) {
   const cartquantity = useSelector(state=>state.totalQuantity)
   const items = useSelector(state=>state.items)
-  
+
   const [ buttonHighlited , setButtonhighleted ] =useState(false)
 
   const buttonClass = `${classes.button}   ${  buttonHighlited ?  classes.bump : ""}`
@@ -25,7 +25,6 @@ function CartButton(props) {
          }
  
      } , [items])
-
 
 
     return (

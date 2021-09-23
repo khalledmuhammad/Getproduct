@@ -5,15 +5,16 @@ import {useSelector } from "react-redux"
 
 
 function Cart(props) {
-    const cartItems = useSelector(state=>state.items)
+    const cartItems = useSelector(state=>state.items  ) 
 
 
     return (
         <Modal  onClickback={props.onHideCart}>
             <div>
             <h2>Your Shopping Cart</h2>
-            {
+         {
             cartItems.map(items=> <CartItems 
+                key={items.id}
                 id={items.id} 
                 title={items.title}
                  price={items.price}
